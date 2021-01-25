@@ -1,7 +1,10 @@
 {
-  "name": "begin-app",
-  "version": "0.0.0",
-  "description": "Begin basic Hello World! app for Node",
+  "arc": {
+    "app": "begin-app",
+    "http": [
+      {"/": {"src": "src/http/get-index", "method": "any"}}
+    ]
+  },
   "scripts": {
     "start": "cross-env NODE_ENV=testing npx sandbox"
   },
