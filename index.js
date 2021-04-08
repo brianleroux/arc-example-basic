@@ -1,9 +1,3 @@
-exports.handler = async function http (req) {
-  return {
-    statusCode: 200,
-    headers: {
-      'content-type': 'text/html; charset=utf8'
-    },
-    body: `hello <strong>world</strong>`
-  }
-}
+let arc = require('@architect/functions')
+let fun = req => ({ html: `hello <strong>world</strong><pre>${JSON.stringify(req, null, 2)}</pre>`})
+exports.handler = arc.http.async(fun)

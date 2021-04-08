@@ -1,18 +1,25 @@
 {
   "arc": {
     "app": "begin-app",
-    "http": [{ 
-      "/": {
-        "src": ".", 
-        "method": "any"
+    "http": [
+      {
+        "/": {
+          "src": ".",
+          "method": "any"
+        }
       }
-    }]
+    ]
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=testing npx sandbox"
+    "start": "cross-env NODE_ENV=testing sandbox",
+    "test": "cross-env QUIET=1 tape test.js | tap-spec"
   },
-  "devDependencies": {
+  "dependencies": {
+    "@architect/functions": "^3.13.10",
     "@architect/sandbox": "^3.3.5",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.2.2",
+    "tiny-json-http": "^7.3.0"
   }
 }
