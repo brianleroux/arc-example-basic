@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@architect/functions": "^3.13.10",
-    "@architect/sandbox": "^3.3.5",
+    "@architect/sandbox": "^3.4.1",
     "cross-env": "^7.0.3",
     "tap-spec": "^5.0.0",
     "tape": "^5.2.2",
